@@ -1,39 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { makeStyles } from '@mui/styles';
-
-import { AppBar, Toolbar } from '@mui/material';
-import { IconButton } from '@mui/material';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { AppBar, Collapse, Toolbar } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 import SortIcon from '@mui/icons-material/Sort';
 
+import STYLES from './STYLES';
 
-const useStyles = makeStyles({
-    root: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-        color: 'white',
-    },
-    appbarWrapper: {
-        width: '80%',
-        margin: '0 auto',
-    },
-    appbarTitle: {
-        color: 'white',
-        flexGrow: '1',
-    },
-    colorText: {
-        color: '#5AFF3D',
-    },
-    icon: {
-        color: 'white',
-        fontSize: '2rem',
-    }
-})
+const useStyles = makeStyles(STYLES);
 
 const Header = () => {
     const classes = useStyles();
+    const [checked, setChecked] = useState(false);
+
+    useEffect(() => {
+        setChecked(true);
+    }, [])
+
     return (
         <div className={classes.root}>
             <AppBar className={classes.appbar} color='transparent' elevation={0}>
@@ -44,10 +28,18 @@ const Header = () => {
                     </IconButton>
                 </Toolbar>
             </AppBar>
-            <div>
-                <h2>Welcome to <br />
-                    My<span className={classes.colorText}>Island.</span></h2>
-            </div>
+            <Collapse
+                in={checked}
+                {... true ? { timeout: 2000 } : {}}
+            >
+                <div className={classes.container}>
+                    <h2 className={classes.title}>Welcome to <br />
+                        My<span className={classes.colorText}>Island.</span></h2>
+                    <IconButton >
+                        <KeyboardArrowDownIcon className={classes.goDown} sx={{ fontSize: '2.5rem' }} />
+                    </IconButton>
+                </div>
+            </Collapse>
         </div>
     );
 }
