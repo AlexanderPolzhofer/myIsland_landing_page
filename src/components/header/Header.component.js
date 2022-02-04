@@ -6,9 +6,9 @@ import { AppBar, Collapse, Toolbar } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import SortIcon from '@mui/icons-material/Sort';
 
-import STYLES from './STYLES';
+import HEADER_STYLES from '../../static/HEADER_STYLES';
 
-const useStyles = makeStyles(STYLES);
+const useStyles = makeStyles(HEADER_STYLES);
 
 const Header = () => {
     const classes = useStyles();

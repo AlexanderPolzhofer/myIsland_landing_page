@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { makeStyles } from '@mui/styles';
-import Header from './components/Header.component';
+import Header from './components/header/Header.component';
+import PlaceToVisit from './components/place-to-visit/PlaceToVisit.component';
 
 const useStyles = makeStyles({
   root: {
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className={classes.root}>
       <Header />
+      <PlaceToVisit />
     </div>
   );
 }
