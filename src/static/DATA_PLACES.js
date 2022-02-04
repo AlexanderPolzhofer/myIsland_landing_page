@@ -16,14 +16,14 @@ const DATA_PLACES = [
     {
         title: 'Italy',
         description:
-            'Cinque Terre is mentioned in documents dating to the 11th century. Monterosso and Vernazza were settled first and the other villages grew later, whilst within the territory of the Republic of Genoa. In the 16th century, the inhabitants reinforced existing forts and built new defence towers to defend the area from attacks by the Turks. ',
+            'Cinque Terre is mentioned in documents dating to the 11th century. Monterosso and Vernazza were settled first and the other villages grew later. In the 16th century, the inhabitants reinforced existing forts and built new defence towers to defend the area from attacks. ',
         imageUrl: process.env.PUBLIC_URL + '/images/italy.jpg',
         time: 1500,
     },
     {
         title: 'Beautiful Bay',
         description:
-            'A bay is a recessed, coastal body of water that directly connects to a larger main body of water, such as an ocean, a lake, or even another bay. A large bay is usually called a gulf, sea, sound, or bight. A cove is a small, circular bay with a narrow entrance. A fjord is a particularly steep bay shaped by glacial activity.',
+            'A bay is a recessed, coastal body of water that directly connects to a larger main body of water, such as an ocean, a lake, or even another bay. A large bay is usually called a gulf, sea, sound, or bight. A cove is a small, circular bay with a narrow entrance. ',
         imageUrl: process.env.PUBLIC_URL + '/images/bay.jpg',
         time: 1500,
     }

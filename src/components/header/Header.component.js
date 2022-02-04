@@ -8,6 +8,8 @@ import SortIcon from '@mui/icons-material/Sort';
 
 import HEADER_STYLES from '../../static/HEADER_STYLES';
 
+import { Link as Scroll } from 'react-scroll';
+
 const useStyles = makeStyles(HEADER_STYLES);
 
 const Header = () => {
@@ -19,7 +21,7 @@ const Header = () => {
     }, [])
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} id='header'>
             <AppBar className={classes.appbar} color='transparent' elevation={0}>
                 <Toolbar className={classes.appbarWrapper}>
                     <h2 className={classes.appbarTitle}>My<span className={classes.colorText}>Island.</span></h2>
@@ -35,9 +37,11 @@ const Header = () => {
                 <div className={classes.container}>
                     <h2 className={classes.title}>Welcome to <br />
                         My<span className={classes.colorText}>Island.</span></h2>
-                    <IconButton >
-                        <KeyboardArrowDownIcon className={classes.goDown} sx={{ fontSize: '2.5rem' }} />
-                    </IconButton>
+                    <Scroll to='place-to-visit' smooth={true}>
+                        <IconButton >
+                            <KeyboardArrowDownIcon className={classes.goDown} sx={{ fontSize: '2.5rem' }} />
+                        </IconButton>
+                    </Scroll>
                 </div>
             </Collapse>
         </div>
