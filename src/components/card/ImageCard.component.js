@@ -11,9 +11,9 @@ const ImageCard = ({ place, checked }) => {
     return (
         <Collapse
             in={checked}
-            {...checked ? { timeout: 1500 } : {}}
+            {...checked ? { timeout: 1000 } : {}}
         >
-            <Card sx={{ maxWidth: 600, maxHeight: 610, background: 'rgba(0,0,0,0.2)', color: 'white' }}>
+            <Card sx={{ maxWidth: 600, minHeight: 620, background: 'rgba(0,0,0,0.2)', color: 'white' }}>
                 <CardMedia
                     component="img"
                     alt="logo"
